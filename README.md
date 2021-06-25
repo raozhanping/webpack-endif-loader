@@ -1,13 +1,38 @@
-# webpack-endif-loader
+# endif-loader
 
-Preprocess HTML, JavaScript, and other files with directives based off custom or ENV configuration
+endif-loader realized Condition compiler, it can Preprocess HTML, JavaScript, and other files with directives based off custom or ENV configuration
 
 ## Configuration
 
 Install via npm:
 
 ```bash
-$ npm install --save webpack-endif-loader
+$ npm install --save endif-loader
+```
+
+## Usage Examples
+`webpack.config.js`
+
+```js
+module.exports = {
+  module: {
+    rules: [
+      {
+        test: /target-file.js$/,
+        use: [
+          {
+            loader: `enif-loader`,
+            options: {
+              context: {
+                DEV: process.env.NODE_ENV === 'development'
+              }
+            }
+          },
+        ],
+      },
+    ],
+  },
+};
 ```
 
 ## What does it look like?
@@ -212,26 +237,6 @@ body {
 #!/bin/bash
 
 # #include util.sh
-```
-
-## Usage Examples
-webpack.config.js
-
-```js
-module.exports = {
-  module: {
-    rules: [
-      {
-        test: /target-file.js$/,
-        use: [
-          {
-            loader: `webpack-enif-loader`,
-          },
-        ],
-      },
-    ],
-  },
-};
 ```
 
 ## License

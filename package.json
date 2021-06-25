@@ -3,6 +3,7 @@
   "version": "0.0.1",
   "main": "index.js",
   "license": "MIT",
+  "keywords": ["webpack", "condition compile"],
   "files": [
     "preprocess"
   ],
