@@ -1,13 +1,18 @@
 {
-  "name": "webpack-endif-loader",
-  "version": "1.0.0",
+  "name": "endif-loader",
+  "version": "0.0.0",
   "main": "index.js",
   "license": "MIT",
+  "files": [
+    "preprocess"
+  ],
   "scripts": {
     "npm": "release-it"
   },
   "dependencies": {
-    "release-it": "^14.10.0",
     "xregexp": "3.1.0"
+  },
+  "devDependencies": {
+    "release-it": "^10.0.3"
   }
 }
